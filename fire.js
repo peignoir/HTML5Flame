@@ -43,7 +43,7 @@ for (x = 1; x < (width - 1); x+=1){
 		if(!Buffer1[x +1]) {Buffer1[x + 1] = 0;}
 		if(x>1&&x<(width-2)){Buffer2[x][y-1] = (Buffer1[x - 1][y] + Buffer1[x + 1][y] + Buffer1[x][y + 1] + Buffer1[x][y - 1]) / 4 - 1;}
 		else Buffer2[x][y-1] = (Buffer1[x][y]+ Buffer1[x][y+1])/2 -4;
-		setPixel(imageData, x, y, 0,  Buffer2[x][y], 0, 0xff); // r, g, b, a
+		setPixel(imageData, x, y, Buffer2[x][y],  0, 0, 0xff); // r, g, b, a
 			}
 	  	}
 
